@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/lblIdCamisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/btnCamisa"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ToggleButton
+            android:id="@+id/btnCamisa"
+            android:layout_width="170dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/md_theme_secondaryFixed"
+            android:textOff=" "
+            android:textOn=" "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgCamisa"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnCamisa"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dog" />
+
+        <TextView
+            android:id="@+id/lblCamisa"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:elevation="10dp"
+            android:text="Camisa"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgCamisa" />
+
+        <TextView
+            android:id="@+id/lblMarcaCamisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:text="Marca"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblCamisa" />
+
+        <TextView
+            android:id="@+id/lblPrecioCamisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:text="$40"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblMarcaCamisa" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/grpCamisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnCamisa"
+            app:layout_constraintEnd_toEndOf="@+id/btnCamisa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:singleSelection="true">
+
+            <ToggleButton
+                android:id="@+id/btnCamisaS"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:checked="false"
+                android:textAllCaps="false"
+                android:textOff="S"
+                android:textOn="S" />
+
+            <ToggleButton
+                android:id="@+id/btnCamisaM"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:checked="false"
+                android:textOff="M"
+                android:textOn="M" />
+
+            <ToggleButton
+                android:id="@+id/btnCamisaL"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:textOff="L"
+                android:textOn="L" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btnCamisa"
+            app:layout_constraintTop_toBottomOf="@+id/lblPrecioCamisa">
+
+            <Button
+                android:id="@+id/btnDescripcionCamisa"
+                android:layout_width="105dp"
+                android:layout_height="47dp"
+                android:visibility="visible"
+                app:icon="@drawable/ojo"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

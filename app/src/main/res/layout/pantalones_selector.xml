@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/lblIdPantalon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/btnCamisa"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ToggleButton
+            android:id="@+id/btnPantalon"
+            android:layout_width="170dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/md_theme_secondaryFixed"
+            android:textOff=" "
+            android:textOn=" "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgPantalon"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnPantalon"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dog" />
+
+        <TextView
+            android:id="@+id/lblPantalon"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:elevation="10dp"
+            android:text="Pantalon"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgPantalon" />
+
+        <TextView
+            android:id="@+id/lblMarcaPantalon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:text="Marca"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblPantalon" />
+
+        <TextView
+            android:id="@+id/lblPrecioPantalon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:text="$40"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblMarcaPantalon" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/grpPantalon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPantalon"
+            app:layout_constraintEnd_toEndOf="@+id/btnPantalon"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+            app:singleSelection="true">
+
+            <ToggleButton
+                android:id="@+id/btnPantalonS"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:checked="true"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textOff="S"
+                android:textOn="S" />
+
+            <ToggleButton
+                android:id="@+id/btnPantalonM"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:checked="false"
+                android:textOff="M"
+                android:textOn="M" />
+
+            <ToggleButton
+                android:id="@+id/btnPantalonL"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:textOff="L"
+                android:textOn="L" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnPantalon"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/btnPantalon"
+            app:layout_constraintTop_toBottomOf="@+id/lblPrecioPantalon">
+
+            <Button
+                android:id="@+id/btnDescripcionPantalon"
+                android:layout_width="105dp"
+                android:layout_height="47dp"
+                android:visibility="visible"
+                app:icon="@drawable/ojo"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

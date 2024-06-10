@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Catalogo">
+
+    <LinearLayout
+        android:id="@+id/lloCategorias"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/btnCaballeros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/md_theme_inversePrimary"
+            android:padding="0dp"
+            android:text="CABALLEROS"
+            android:textColor="@color/md_theme_inverseSurface"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:cornerRadius="5dp"
+            app:icon="@drawable/caballeros"
+            app:iconGravity="start"
+            app:iconPadding="0dp"
+            app:iconSize="110dp"
+            app:iconTint="@null" />
+
+        <Button
+            android:id="@+id/btnDamas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/md_theme_inversePrimary"
+            android:padding="0dp"
+            android:text="DAMAS"
+            android:textColor="@color/md_theme_inverseSurface"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:cornerRadius="5dp"
+            app:icon="@drawable/damas"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:iconSize="110dp"
+            app:iconTint="@null" />
+
+        <Button
+            android:id="@+id/btnZapatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/md_theme_inversePrimary"
+            android:padding="0dp"
+            android:text="ZAPATOS"
+            android:textColor="@color/md_theme_inverseSurface"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:cornerRadius="5dp"
+            app:icon="@drawable/zapatos"
+            app:iconGravity="start"
+            app:iconPadding="0dp"
+            app:iconSize="110dp"
+            app:iconTint="@null" />
+
+        <Button
+            android:id="@+id/btnAccesorios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/md_theme_inversePrimary"
+            android:padding="0dp"
+            android:text="ACCESORIOS"
+            android:textColor="@color/md_theme_inverseSurface"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:cornerRadius="5dp"
+            app:icon="@drawable/accesorios"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:iconSize="110dp"
+            app:iconTint="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lloCatalogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCatalogoRegresar"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:backgroundTint="@color/md_theme_error"
+                app:icon="?attr/homeAsUpIndicator"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="35dp" />
+
+            <Button
+                android:id="@+id/btnFiltros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0"
+                android:text="Filtrar" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0"
+                android:paddingHorizontal="5dp"
+                android:tint="@android:color/black"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
+            <EditText
+                android:id="@+id/txtBuscar"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Buscar"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lloFiltros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:text="Estilo"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnEstilo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="20dp"
+                android:text="Marca"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnMarca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp" />
+
+            <TextView
+                android:id="@+id/lblFiltroTalla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="20dp"
+                android:text="Talla"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnTalla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="20dp"
+                android:text="Sucursal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnSucursal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="20dp"
+                android:text="Precio"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="Desde: $"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/txtDesde"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:paddingLeft="50dp"
+                    android:text="Hasta: $"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/txtHasta"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp">
+
+                <Button
+                    android:id="@+id/btnLimpiarFiltros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/md_theme_errorContainer_mediumContrast"
+                    android:text="Limpiar filtros" />
+
+                <Button
+                    android:id="@+id/btnAplicarFiltros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/md_theme_inversePrimary"
+                    android:text="Aplicar filtros" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chgTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            app:checkedChip="@id/chpCamisas"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chpCamisas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:tag="camisas"
+                android:text="Camisas"
+                android:textSize="16sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chpPantalones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:tag="pantalones"
+                android:text="Pantalones"
+                android:textSize="16sp" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvCatalogo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
